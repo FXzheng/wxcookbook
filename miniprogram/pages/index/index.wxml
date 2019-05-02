@@ -1,0 +1,17 @@
+<!--pages/index/index.wxml-->
+<view class='index-container'>
+  <view class='index-search' bindtap='goToSearch' >
+    <image src='../images/search.png'></image>
+    <input placeholder="今天想吃点什么" disabled></input>
+  </view>
+  <view class="recommend">精品菜推荐</view>
+  <view class='index-category'>
+  <block wx:for="{{menu}}" wx:for-item="item" wx:if="{{item.socre>8.0}}" wx:key='key'>
+     <view  class='index-list' bindtap='goDetails' data-id="{{item._id}}">
+      <image src='{{item.figure}}'></image>
+      <text>{{item.title}}</text>
+    </view>
+  </block>
+    <view class='index-list empty'></view>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<!--pages/category/category.wxml-->
+<view class='category-container'>
+<!-- <block wx:for="{{}}" wx:fot-item="{{}}"> -->
+  <block wx:for="{{category}}" wx:for-item="item" wx:key="key">
+    <view class='category' bindtap='goList'data-catego='{{item.category}}'>
+      <text class='categorytitle' >{{item.category}}</text>
+      <view class='categorylist'>
+        <block wx:for='{{item.exFigure}}' wx:for-item='exitem' wx:key='exkey'>
+          <image src='{{exitem.exf}}'></image>
+        </block>
+      </view>
+    </view>
+  </block>
+  
+<!-- </block> -->
+</view>

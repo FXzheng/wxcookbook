@@ -1,0 +1,38 @@
+<!--pages/details/details.wxml-->
+
+<view class='details-container'>
+  <image class='details-pic' src='{{details.figure}}'></image>
+  <view class='details-header'> 
+    <text class='details-title'>{{details.title}}</text>
+  </view>
+  <view class='tools'>
+    <view class='author-details'>
+      <image class='head-portrait' src='{{details.headPortrait}}'></image>
+      <view class='details'>
+        <text>作者</text>
+        <text class='author'>{{details.author}}</text>
+      </view>
+    </view>
+    <view class='collect'>
+      <image src="{{!hasUserInfo&&isClick?'../images/collect.png':'../images/incollect.png'}}" bindtap='collection' data-id='{{details._id}}'bindgetuserinfo="getUserInfo"></image>
+    </view>
+
+  </view>
+  <view class='table'>
+    <text class='b-title cs'>用料</text>
+    <block wx:for="{{details.materails}}" wx:for-item="item">
+      <view class='tr'>
+        <view class='td'>{{item.materail}}</view>
+        <view class='td'>{{item.amount}}</view>
+      </view>
+    </block>
+  </view>
+  <block wx:for="{{details.steps}}" wx:for-item="sitem" wx:for-index="index">
+  <view class='step'>
+    <text class='b-title'>步骤{{index+1}}</text>
+    <image  wx:if="{{sitem.stepFigure}}" class='steppic'src="{{sitem.stepFigure}}"></image>
+    <view wx:else></view>
+    <text>{{index+1}}.{{sitem.stepText}}</text>
+  </view>
+  </block>
+</view>

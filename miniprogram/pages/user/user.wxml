@@ -1,0 +1,14 @@
+<!--pages/loginf/loginf.wxml-->
+<view class='login-container'>
+  <view class='user-info'>
+     <button wx:if='{{!hasUserInfo&&canIUse}}' open-type='getUserInfo'bindgetuserinfo='getUserInfo' bindtap='onGetOpenid'>授权登录</button>
+    <block wx:else> 
+    <image src='{{userInfo.avatarUrl}}' mode='cover'></image>
+    <text>{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class='user-list'bindtap='goToMyCollet' data-num='col'>
+    <view>我的收藏</view>
+    <image src='../images/right.png'></image>
+  </view>
+</view>

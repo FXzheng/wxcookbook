@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/details/details",
+    "pages/user/user",
+    "pages/search/search",
+    "pages/category/category",
+    "pages/login/login",
+    "pages/list/list",
+    "pages/demoindex/demoindex",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "食知道",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#FF6262",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/images/nav/index.png",
+        "selectedIconPath": "pages/images/nav/index-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "iconPath": "pages/images/nav/menu.png",
+        "selectedIconPath": "pages/images/nav/menu-active.png",
+        "text": "菜单"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "pages/images/nav/user.png",
+        "selectedIconPath": "pages/images/nav/user-active.png",
+        "text": "我"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

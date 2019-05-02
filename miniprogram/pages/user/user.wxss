@@ -1,0 +1,40 @@
+/* pages/loginf/loginf.wxss */
+page{
+  background: #f1f1f1;
+}
+.login-container{
+ 
+}
+.user-info{
+  display: flex;
+  flex-direction: row;
+  padding: 40rpx;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 30rpx;
+  
+}
+.user-info>image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  margin-right: 30rpx;
+  
+}
+
+.user-list{
+  display: flex;
+  flex-direction: row;
+  padding:  20rpx 40rpx;
+  background: #fff;
+  align-items: center;
+  /* padding: 20rpx 0; */
+  border-bottom: 1px solid #f1f1f1;
+  justify-content:space-between;
+}
+.user-list> image{
+  width: 45rpx;
+  height: 45rpx;
+  vertical-align: middle;
+  text-align: right;
+}

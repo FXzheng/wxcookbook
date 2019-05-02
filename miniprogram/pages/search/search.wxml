@@ -1,0 +1,25 @@
+<!--pages/search/search.wxml-->
+<view class='search-container'>
+  <view class='search'>
+    <input placeholder='今天想吃点什么？' bindinput='getInputValue' bindconfirm='goSearch'></input>
+    <image src='../images/search.png' bindtap='goSearch'></image>
+  </view>
+  <!-- 搜索记录盒子 -->
+  <view class='search-record-box'>
+    <view class='history-text'>
+      <text>搜索历史</text>
+      <image src='../images/delete.png' bindtap='delete_list'></image>
+    </view>
+    <!-- 记录盒子 -->
+    <view class='history-box'>
+      <view class='history-list'>
+      <block wx:for="{{listarr}}" wx:for-item="item" wx:key="kk">
+        <text  bindtap='hissearch' data-text="{{item}}">{{item}}</text>   
+      </block>
+      </view>
+    </view> 
+  </view>
+  <!-- 热门搜索记录 -->
+  <view class='hot'>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+/* pages/category/category.wxss */
+.category-container{
+  width: 100%;
+}
+.category{
+  width:100%;
+}
+.categorytitle{
+  font-size: 38rpx;
+  font-weight: bold;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+}
+.categorylist{
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  overflow: hidden;
+  height: 240rpx;
+}
+.categorylist image{
+  
+  margin-top: 15rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+
+}
